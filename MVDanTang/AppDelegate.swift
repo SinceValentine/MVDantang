@@ -5,7 +5,6 @@
 //  Created by 天景隆 on 16/12/12.
 //  Copyright © 2016年 天景隆. All rights reserved.
 //
-// 这里测试是否上传成功
 import UIKit
 
 @UIApplicationMain

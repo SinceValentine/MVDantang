@@ -15,6 +15,16 @@ let MVFirstLaunch = "firstLaunch"
 // 是否登录
 let isLogin = "isLogin"
 
+let kTitlesViewH: CGFloat = 35
+let kTitlesViewY: CGFloat = 64
+let kAnimationDuraton = 0.25
+
+let SCREENW = UIScreen.main.bounds.width
+let SCREENH = UIScreen.main.bounds.height
+
+let kIndicatorViewH: CGFloat = 2.0
+
+
 func MVColor(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
     return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
 }

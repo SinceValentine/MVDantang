@@ -16,6 +16,11 @@
 		9A4B734C1DFE9F4900337089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4B734A1DFE9F4900337089 /* LaunchScreen.storyboard */; };
 		9A4B73571DFE9F4900337089 /* MVDanTangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B73561DFE9F4900337089 /* MVDanTangTests.swift */; };
 		9A4B73621DFE9F4900337089 /* MVDanTangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B73611DFE9F4900337089 /* MVDanTangUITests.swift */; };
+		9AC230ED1F1DEB8B009649E7 /* MVChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC230EC1F1DEB8B009649E7 /* MVChannel.swift */; };
+		9AC230EF1F1DEC48009649E7 /* MVHomeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC230EE1F1DEC48009649E7 /* MVHomeItem.swift */; };
+		9AC230F11F1DFEA8009649E7 /* MVSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC230F01F1DFEA8009649E7 /* MVSearchViewController.swift */; };
+		9AC230F31F1E020C009649E7 /* MVTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC230F21F1E020C009649E7 /* MVTopicViewController.swift */; };
+		9AC230F61F1E1479009649E7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC230F51F1E1479009649E7 /* UIView+Extension.swift */; };
 		9AF7FB1F1F02291F007DA444 /* MVNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7FB1E1F02291F007DA444 /* MVNavigationController.swift */; };
 		9AF7FB211F022930007DA444 /* MVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7FB201F022930007DA444 /* MVBaseViewController.swift */; };
 		9AF7FB291F06276C007DA444 /* MVMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF7FB281F06276C007DA444 /* MVMeViewController.swift */; };
@@ -56,6 +61,11 @@
 		9A4B735D1DFE9F4900337089 /* MVDanTangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVDanTangUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4B73611DFE9F4900337089 /* MVDanTangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVDanTangUITests.swift; sourceTree = "<group>"; };
 		9A4B73631DFE9F4900337089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AC230EC1F1DEB8B009649E7 /* MVChannel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVChannel.swift; sourceTree = "<group>"; };
+		9AC230EE1F1DEC48009649E7 /* MVHomeItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVHomeItem.swift; sourceTree = "<group>"; };
+		9AC230F01F1DFEA8009649E7 /* MVSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVSearchViewController.swift; sourceTree = "<group>"; };
+		9AC230F21F1E020C009649E7 /* MVTopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVTopicViewController.swift; sourceTree = "<group>"; };
+		9AC230F51F1E1479009649E7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9AF7FB1E1F02291F007DA444 /* MVNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVNavigationController.swift; sourceTree = "<group>"; };
 		9AF7FB201F022930007DA444 /* MVBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVBaseViewController.swift; sourceTree = "<group>"; };
 		9AF7FB281F06276C007DA444 /* MVMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVMeViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +106,7 @@
 		9A10991A1F00F35C00086664 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				9AC230F41F1E1438009649E7 /* Category */,
 				9A1099261F02243100086664 /* Controller */,
 				9A10991B1F00F36200086664 /* Tools */,
 			);
@@ -193,9 +204,27 @@
 			path = MVDanTangUITests;
 			sourceTree = "<group>";
 		};
+		9AC230EB1F1DEB64009649E7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9AC230EC1F1DEB8B009649E7 /* MVChannel.swift */,
+				9AC230EE1F1DEC48009649E7 /* MVHomeItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9AC230F41F1E1438009649E7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				9AC230F51F1E1479009649E7 /* UIView+Extension.swift */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		9AF7FB221F06271D007DA444 /* DanTang */ = {
 			isa = PBXGroup;
 			children = (
+				9AC230EB1F1DEB64009649E7 /* Model */,
 				9AF7FB231F062728007DA444 /* Controller */,
 			);
 			name = DanTang;
@@ -205,6 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				9AF7FB2C1F062788007DA444 /* MVDanTangViewController.swift */,
+				9AC230F21F1E020C009649E7 /* MVTopicViewController.swift */,
+				9AC230F01F1DFEA8009649E7 /* MVSearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -459,12 +490,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC230ED1F1DEB8B009649E7 /* MVChannel.swift in Sources */,
+				9AC230F31F1E020C009649E7 /* MVTopicViewController.swift in Sources */,
 				9AF7FB291F06276C007DA444 /* MVMeViewController.swift in Sources */,
+				9AC230F61F1E1479009649E7 /* UIView+Extension.swift in Sources */,
 				9AF7FB2D1F062788007DA444 /* MVDanTangViewController.swift in Sources */,
 				9AF7FB211F022930007DA444 /* MVBaseViewController.swift in Sources */,
 				9A10991D1F00F39100086664 /* MVConst.swift in Sources */,
 				9AF7FB2B1F06277A007DA444 /* MVProductViewController.swift in Sources */,
+				9AC230EF1F1DEC48009649E7 /* MVHomeItem.swift in Sources */,
 				9AF7FB311F062A83007DA444 /* MVCategoryViewController.swift in Sources */,
+				9AC230F11F1DFEA8009649E7 /* MVSearchViewController.swift in Sources */,
 				9A1099251F00F66000086664 /* MVNewFeatureViewController.swift in Sources */,
 				9A1099281F02245000086664 /* MVTabBarController.swift in Sources */,
 				9AF7FB1F1F02291F007DA444 /* MVNavigationController.swift in Sources */,

@@ -116,8 +116,20 @@ class MVDanTangViewController: UIViewController {
     }
     
     func titlesClick(button: UIButton) {
+        selectedButton?.isEnabled = true
+        button.isEnabled = false
+        selectedButton = button
         
+        UIView.animate(withDuration: kAnimationDuraton) { 
+            self.indicatorView!.width = self.selectedButton!.titleLabel!.width
+            self.indicatorView!.centerX = self.selectedButton!.centerX
+        }
+        
+        var offset = contentView!.contentOffset
+        offset.x = CGFloat(button.tag) * contentView!.width
+        contentView!.setContentOffset(offset, animated: true)
     }
+    
     
     
     // 底部的scrollView

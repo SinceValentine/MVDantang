@@ -26,6 +26,8 @@ let SCREENW = UIScreen.main.bounds.width
 let SCREENH = UIScreen.main.bounds.height
 
 let kIndicatorViewH: CGFloat = 2.0
+/// 动画时长
+let kAnimationDuration = 0.25
 
 
 func MVColor(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {

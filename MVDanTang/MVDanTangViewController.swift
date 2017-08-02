@@ -24,8 +24,19 @@ class MVDanTangViewController: UIViewController {
         super.viewDidLoad()
         // 设置导航栏
         setupNav()
-//        weak var weakSelf = self
+        weak var weakSelf = self
         // 获取首页顶部选择数据
+        MVNetworkTool.shareNetworkTool.loadHomeTopData { (mv_channels) in
+            for channel in mv_channels {
+                let vc = MVTopicViewController()
+                vc.title = channel.name
+                vc.type = channel.id!
+                weakSelf?.addChildViewController(vc)
+            }
+            
+            weakSelf?.setupTitlesView()
+            weakSelf?.setupContentView()
+        }
     }
     
     
@@ -82,6 +93,7 @@ class MVDanTangViewController: UIViewController {
             button.setTitleColor(UIColor.gray, for: .normal)
             button.setTitleColor(MVGlobalRedColor(), for: .disabled)
             button.addTarget(self, action: #selector(titlesClick(button:)), for: .touchUpInside)
+            titlesView.addSubview(button)
             // 默认点击第一个按钮
             if index == 0 {
                 button.isEnabled = false
@@ -155,3 +167,15 @@ class MVDanTangViewController: UIViewController {
     */
 
 }
+
+extension MVDanTangViewController: UIScrollViewDelegate {
+    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+        scrollViewDidEndScrollingAnimation(scrollView)
+        // 当前索引
+        let index = Int(scrollView.contentOffset.x / scrollView.width)
+        
+        let button = titlesView?.subviews[index] as! UIButton
+        titlesClick(button: button)
+    }
+}
+

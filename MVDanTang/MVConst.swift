@@ -15,6 +15,9 @@ let MVFirstLaunch = "firstLaunch"
 // 是否登录
 let isLogin = "isLogin"
 
+// 操作成功
+let RETURN_OK = 200
+
 let kTitlesViewH: CGFloat = 35
 let kTitlesViewY: CGFloat = 64
 let kAnimationDuraton = 0.25

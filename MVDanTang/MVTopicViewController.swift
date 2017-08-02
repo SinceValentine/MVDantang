@@ -9,7 +9,8 @@
 import UIKit
 
 class MVTopicViewController: MVBaseViewController {
-
+    var type = Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

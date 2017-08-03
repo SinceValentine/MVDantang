@@ -7,22 +7,46 @@
 //
 
 import UIKit
+import ObjectMapper
+//class MVChannel: NSObject {
+//    var editable: Bool?
+//    var id: Int?
+//    var name: String?
+//    
+//    
+//    init(dict: [String: AnyObject]) {
+//        super.init()
+//        id = dict["id"] as? Int
+//        name = dict["name"] as? String
+//        editable = dict["editable"] as? Bool
+//    }
+//
+//    
+//    
+//}
 
-class MVChannel: NSObject {
+
+class MVChannel: NSObject,Mappable {
     var editable: Bool?
     var id: Int?
     var name: String?
     
     
     init(dict: [String: AnyObject]) {
-        super.init()
         id = dict["id"] as? Int
         name = dict["name"] as? String
         editable = dict["editable"] as? Bool
     }
-
     
+    required init?(map: Map) {
+    }
+    
+    func mapping(map: Map) {
+
+         editable <- map["editbale"]
+         id <- map["id"]
+         name <- map["name"]
+    }
     
 }
-
 

@@ -34,8 +34,8 @@ class MVDanTangViewController: UIViewController {
                 weakSelf?.addChildViewController(vc)
             }
             
-            weakSelf?.setupTitlesView()
-            weakSelf?.setupContentView()
+            weakSelf!.setupTitlesView()
+            weakSelf!.setupContentView()
         }
     }
     

@@ -9,4 +9,5 @@ target ‘MVDanTang’ do
     pod "FDFullscreenPopGesture", "~> 1.1"
     pod 'Alamofire', '~> 4.4'
     pod "SwiftyJSON"
+    pod "ObjectMapper"
 end

@@ -15,6 +15,41 @@ import SVProgressHUD
 class MVNetworkTool: NSObject {
     static let shareNetworkTool = MVNetworkTool()
    
+    func loadHomeInfo(id: Int, finished:@escaping (_ homeItems: [MVHomeItem]) -> ()) {
+        let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
+        let params = ["gender": 1,
+                      "generation": 1,
+                      "limit": 20,
+                      "offset": 0]
+        Alamofire
+            .request(url,method: .post, parameters: params)
+            .responseJSON { (response) in
+                guard response.result.isSuccess else {
+                    SVProgressHUD.showError(withStatus: "加载失败")
+                    return
+                }
+                
+                if let value = response.result.value {
+                    let dict = JSON(value)
+                    let code = dict["code"].intValue
+                    let message = dict["message"].stringValue
+                    
+                    guard code == RETURN_OK else {
+                        SVProgressHUD.showInfo(withStatus: message)
+                        return
+                    }
+                    
+                    SVProgressHUD.dismiss()
+                    
+                    let data = dict["data"].dictionary
+                }
+                
+                
+                
+                
+        }
+    }
+    
     func loadHomeTopData(finished: @escaping (_ mv_channels: [MVChannel]) -> ()) {
         // 获取首页顶部选择数据
         let url = BASE_URL + "v2/channels/preset"

@@ -8,13 +8,22 @@
 
 import UIKit
 
-class MVTopicViewController: MVBaseViewController {
+class MVTopicViewController: UITableViewController {
     var type = Int()
+    // 首页列表数据
+    var items = [MVHomeItem]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = MVGlobalColor()
+        
+    }
+    
+    func setupTableView() {
+        tableView.rowHeight = 160
+        tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsetsMake(kTitlesViewY + kTitlesViewH, 0, tabBarController!.tabBar.height, 0)
+        tableView.scrollIndicatorInsets = tableView.contentInset
     }
 
     override func didReceiveMemoryWarning() {

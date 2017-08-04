@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MVTopicViewController: UITableViewController {
+class MVTopicViewController: UITableViewController, MVHomeCellDelegate {
     var type = Int()
     // 首页列表数据
     var items = [MVHomeItem]()
@@ -17,6 +17,25 @@ class MVTopicViewController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = MVGlobalColor()
         
+        setupTableView()
+        
+        refreshControl?.addTarget(self, action: #selector(loadHomeData), for: .valueChanged)
+        weak var weakSelf = self
+        MVNetworkTool.shareNetworkTool.loadHomeInfo(id: type) { (homoItems) in
+            weakSelf!.items = homoItems
+            weakSelf!.tableView.reloadData()
+        }
+        
+        
+    }
+    
+    func loadHomeData() {
+        weak var weakSelf = self
+        MVNetworkTool.shareNetworkTool.loadHomeInfo(id: type) { (homoItems) in
+            weakSelf!.items = homoItems
+            weakSelf!.tableView.reloadData()
+            weakSelf!.refreshControl?.endRefreshing()
+        }
     }
     
     func setupTableView() {
@@ -24,8 +43,40 @@ class MVTopicViewController: UITableViewController {
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsetsMake(kTitlesViewY + kTitlesViewH, 0, tabBarController!.tabBar.height, 0)
         tableView.scrollIndicatorInsets = tableView.contentInset
+        let nib = UINib(nibName: String(describing: MVHomeCell.self), bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: String(describing: MVHomeCell.self))
     }
-
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let homeCell = tableView.dequeueReusableCell(withIdentifier: String(describing: MVHomeCell.self), for: indexPath) as! MVHomeCell
+        homeCell.selectionStyle = .none
+        homeCell.homeItem = items[indexPath.row]
+        homeCell.delegate = self
+        return homeCell
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = MVDetailViewController()
+        detailVC.homeItem = items[indexPath.row]
+        detailVC.title = "攻略详情"
+        navigationController?.pushViewController(detailVC, animated: true)
+        
+    }
+    
+    func homeCellDidClickedFavoriteButton(button: UIButton) {
+        if !UserDefaults.standard.bool(forKey: isLogin) {
+//            let loginVC = 
+        }
+        
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

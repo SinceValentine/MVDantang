@@ -12,6 +12,9 @@
 		9A1099251F00F66000086664 /* MVNewFeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1099241F00F66000086664 /* MVNewFeatureViewController.swift */; };
 		9A1099281F02245000086664 /* MVTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1099271F02245000086664 /* MVTabBarController.swift */; };
 		9A39D7B71F31B711007AD753 /* MVNetworkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A39D7B61F31B711007AD753 /* MVNetworkTool.swift */; };
+		9A39D7BB1F345D28007AD753 /* MVHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A39D7B91F345D28007AD753 /* MVHomeCell.swift */; };
+		9A39D7BC1F345D28007AD753 /* MVHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A39D7BA1F345D28007AD753 /* MVHomeCell.xib */; };
+		9A39D7BE1F34778B007AD753 /* MVDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A39D7BD1F34778B007AD753 /* MVDetailViewController.swift */; };
 		9A4B73421DFE9F4900337089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4B73411DFE9F4900337089 /* AppDelegate.swift */; };
 		9A4B73491DFE9F4900337089 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4B73481DFE9F4900337089 /* Assets.xcassets */; };
 		9A4B734C1DFE9F4900337089 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4B734A1DFE9F4900337089 /* LaunchScreen.storyboard */; };
@@ -52,6 +55,9 @@
 		9A1099241F00F66000086664 /* MVNewFeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVNewFeatureViewController.swift; sourceTree = "<group>"; };
 		9A1099271F02245000086664 /* MVTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVTabBarController.swift; sourceTree = "<group>"; };
 		9A39D7B61F31B711007AD753 /* MVNetworkTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVNetworkTool.swift; sourceTree = "<group>"; };
+		9A39D7B91F345D28007AD753 /* MVHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVHomeCell.swift; sourceTree = "<group>"; };
+		9A39D7BA1F345D28007AD753 /* MVHomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVHomeCell.xib; sourceTree = "<group>"; };
+		9A39D7BD1F34778B007AD753 /* MVDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVDetailViewController.swift; sourceTree = "<group>"; };
 		9A4B733E1DFE9F4900337089 /* MVDanTang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVDanTang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4B73411DFE9F4900337089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4B73481DFE9F4900337089 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +156,15 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		9A39D7B81F3457A7007AD753 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A39D7B91F345D28007AD753 /* MVHomeCell.swift */,
+				9A39D7BA1F345D28007AD753 /* MVHomeCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		9A4B73351DFE9F4900337089 = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +242,7 @@
 		9AF7FB221F06271D007DA444 /* DanTang */ = {
 			isa = PBXGroup;
 			children = (
+				9A39D7B81F3457A7007AD753 /* View */,
 				9AC230EB1F1DEB64009649E7 /* Model */,
 				9AF7FB231F062728007DA444 /* Controller */,
 			);
@@ -239,6 +255,7 @@
 				9AF7FB2C1F062788007DA444 /* MVDanTangViewController.swift */,
 				9AC230F21F1E020C009649E7 /* MVTopicViewController.swift */,
 				9AC230F01F1DFEA8009649E7 /* MVSearchViewController.swift */,
+				9A39D7BD1F34778B007AD753 /* MVDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -421,6 +438,7 @@
 			files = (
 				9A4B734C1DFE9F4900337089 /* LaunchScreen.storyboard in Resources */,
 				9A4B73491DFE9F4900337089 /* Assets.xcassets in Resources */,
+				9A39D7BC1F345D28007AD753 /* MVHomeCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +513,7 @@
 			files = (
 				9AC230ED1F1DEB8B009649E7 /* MVChannel.swift in Sources */,
 				9AC230F31F1E020C009649E7 /* MVTopicViewController.swift in Sources */,
+				9A39D7BE1F34778B007AD753 /* MVDetailViewController.swift in Sources */,
 				9AF7FB291F06276C007DA444 /* MVMeViewController.swift in Sources */,
 				9AC230F61F1E1479009649E7 /* UIView+Extension.swift in Sources */,
 				9AF7FB2D1F062788007DA444 /* MVDanTangViewController.swift in Sources */,
@@ -505,6 +524,7 @@
 				9A39D7B71F31B711007AD753 /* MVNetworkTool.swift in Sources */,
 				9AF7FB311F062A83007DA444 /* MVCategoryViewController.swift in Sources */,
 				9AC230F11F1DFEA8009649E7 /* MVSearchViewController.swift in Sources */,
+				9A39D7BB1F345D28007AD753 /* MVHomeCell.swift in Sources */,
 				9A1099251F00F66000086664 /* MVNewFeatureViewController.swift in Sources */,
 				9A1099281F02245000086664 /* MVTabBarController.swift in Sources */,
 				9AF7FB1F1F02291F007DA444 /* MVNavigationController.swift in Sources */,

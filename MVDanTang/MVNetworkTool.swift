@@ -15,6 +15,7 @@ import SVProgressHUD
 class MVNetworkTool: NSObject {
     static let shareNetworkTool = MVNetworkTool()
    
+    
     func loadHomeInfo(id: Int, finished:@escaping (_ homeItems: [MVHomeItem]) -> ()) {
         let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"
         let params = ["gender": 1,
@@ -40,8 +41,19 @@ class MVNetworkTool: NSObject {
                     }
                     
                     SVProgressHUD.dismiss()
-                    
                     let data = dict["data"].dictionary
+                    // 字典转成模型
+                    if let items = data!["items"]?.arrayObject {
+                        var homeItems = [MVHomeItem]()
+                        for item in items {
+                            let homeItem = MVHomeItem(dict: item as! [String: AnyObject])
+                            homeItems.append(homeItem)
+                        }
+                        
+                        finished(homeItems)
+                    }
+                    
+                    
                 }
                 
                 

@@ -116,7 +116,7 @@ class MVDanTangViewController: UIViewController {
     }
     
     func titlesClick(button: UIButton) {
-        selectedButton?.isEnabled = true
+        selectedButton!.isEnabled = true
         button.isEnabled = false
         selectedButton = button
         

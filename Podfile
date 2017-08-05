@@ -10,4 +10,6 @@ target 'MVDanTang' do
     pod 'Alamofire', '~> 4.4'
     pod 'SwiftyJSON'
     pod 'ObjectMapper'
+    pod 'MobilePlayer'
 end
+

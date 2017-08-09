@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.4.0)
+  - CryptoSwift (0.6.7)
   - FDFullscreenPopGesture (1.1)
   - Kingfisher (3.5.0)
   - MobilePlayer (1.2.0)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
+  - CryptoSwift
   - FDFullscreenPopGesture (~> 1.1)
   - Kingfisher
   - MobilePlayer
@@ -20,6 +22,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  CryptoSwift: 685ae257941e5447474348a2b545583e1a16b573
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   Kingfisher: 7c62087039d93d26c54c8dd9b0b588d2ce55cef6
   MobilePlayer: 069b13482499f14c25b6ce53f63a91e17975b073
@@ -28,6 +31,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 7288501030fc1e61548a781cdb32919c27d8d28e
+PODFILE CHECKSUM: 6a5a81f86e1ac8d0cfd736ccd490d0f13aa2febe
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.1.1

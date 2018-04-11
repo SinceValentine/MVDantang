@@ -25,6 +25,9 @@ class MVDetailViewController: MVBaseViewController {
         webView.delegate = self
         view.addSubview(webView)
         
+        let myView: UIView = UIView()
+        myView.frame = 
+        
     }
 
     override func didReceiveMemoryWarning() {

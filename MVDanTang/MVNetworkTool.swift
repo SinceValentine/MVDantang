@@ -13,8 +13,8 @@ import SwiftyJSON
 import SVProgressHUD
 
 class MVNetworkTool: NSObject {
+    // swift单例的写法
     static let shareNetworkTool = MVNetworkTool()
-   
     
     func loadHomeInfo(id: Int, finished:@escaping (_ homeItems: [MVHomeItem]) -> ()) {
         let url = BASE_URL + "v1/channels/\(id)/items?gender=1&generation=1&limit=20&offset=0"

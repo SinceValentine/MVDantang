@@ -11,5 +11,6 @@ target 'MVDanTang' do
     pod 'SwiftyJSON'
     pod 'ObjectMapper'
     pod 'MobilePlayer'
+    pod 'CryptoSwift'
 end
 
